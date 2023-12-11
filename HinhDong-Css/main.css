@@ -1,0 +1,104 @@
+:root {
+    --rotate: 274.48px;
+}
+.container  {
+  perspective: 1000px;
+  position: relative;
+  margin-left: 200px;
+  margin-top: 300px;
+  width: 120px;
+  height: 200px;
+  float: left;
+}
+.machine {
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  width: 140px;
+  height: 220px;
+}
+.body {
+ background-color: blueviolet;
+}
+.slide {
+  width: 120px;
+  height: 200px;
+  background-color: wheat;
+  border: 1px solid black;
+  opacity: 0.8;
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  line-height: 200px;
+  transform: rotateX(var(--deg)) translateZ(var(--rotate));
+  animation: lucky 12s both infinite;
+}
+.slide:nth-child(1) {
+  background-color: tomato;
+  --deg: 0deg;
+}
+.slide:nth-child(2) {
+  --deg: 40deg;
+  background-color: lavender;
+}
+.slide:nth-child(3) {
+  background-color: olive;
+  --deg: 80deg;
+}
+.slide:nth-child(4) {
+  background-color: lightgreen;
+  --deg: 120deg;
+}
+.slide:nth-child(5) {
+  background-color: wheat;
+  --deg: 160deg;
+}
+.slide:nth-child(6) {
+  background-color: cornflowerblue;
+  --deg: 200deg;
+}
+.slide:nth-child(7) {
+  background-color: brown;
+  --deg: 240deg;
+}
+.slide:nth-child(8) {
+  background-color: yellow;
+  --deg: 280deg;
+}
+.slide:nth-child(9) {
+  background-color: midnightblue;
+  --deg: 320deg;
+}
+@keyframes lucky {
+    10% {
+        transform: rotateX(cal(var(--deg)))) translateZ(var(--rotate));
+    }
+    20% {
+        transform: rotateX(calc(var(--deg) - 40deg)) translateZ(var(--rotate));
+    }
+    30% {
+        transform: rotateX(calc(var(--deg) - 80deg)) translateZ(var(--rotate));
+    }
+    40% {
+        transform: rotateX(calc(var(--deg) - 120deg)) translateZ(var(--rotate));
+    }
+    50% {
+        transform: rotateX(calc(var(--deg) - 160deg)) translateZ(var(--rotate));
+    }
+    60% {
+        transform: rotateX(calc(var(--deg) - 200deg)) translateZ(var(--rotate));
+    }
+    70% {
+        transform: rotateX(calc(var(--deg) - 240deg)) translateZ(var(--rotate));
+    }
+    80% {
+        transform: rotateX(calc(var(--deg) - 280deg)) translateZ(var(--rotate));
+    }
+    90% {
+        transform: rotateX(calc(var(--deg) - 320deg)) translateZ(var(--rotate));
+    }
+    100% {
+        transform: rotateX(calc(var(--deg) - 360deg)) translateZ(var(--rotate));
+    }
+}
